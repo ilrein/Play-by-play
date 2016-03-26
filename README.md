@@ -6,5 +6,4 @@
 
 This app explores grabbing data asynchronously from two separate services at a time, each running as their own server.
 
-### Lessons Learned
-- lodash is play on words for underscore, the library it seeks to prove superiority too
+Built by [@iliareingold]('http://iliareingold.com/resume')
