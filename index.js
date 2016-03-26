@@ -8,6 +8,13 @@ app.use(bodyParser.urlencoded({
   extended: true,
 }));
 
+// root
+app.get('/', (req, res) => {
+  res.send('Hello World');
+  res.end();
+});
+
+
 // this middleware will be executed for every request to the app
 app.use((req, res, next) => {
   console.log('Time: %d', Date.now());
