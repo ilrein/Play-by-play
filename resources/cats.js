@@ -10,8 +10,9 @@ module.exports = function (app) {
     newCat.save((err) => {
       if (err) {
         res.json({ result: errorWarning, error: err });
+      } else {
+        res.json({ result: 'cat created successfully' });
       }
-      res.json({ result: 'cat created successfully' });
     });
   });
 
@@ -21,8 +22,9 @@ module.exports = function (app) {
     Cat.find((err, cats) => { // eslint-disable-line
       if (err) {
         res.json({ result: errorWarning, error: err });
+      } else {
+        res.json({ result: 'Got all cats', data: cats });
       }
-      res.json({ result: 'Got all cats', data: cats });
     });
   });
 
@@ -65,8 +67,9 @@ module.exports = function (app) {
     Cat.findByIdAndRemove(req.params.id, (err) => {
       if (err) {
         res.json({ result: errorWarning, err });
+      } else {
+        res.json({ result: 'Cat deleted' });
       }
-      res.json({ result: 'Cat deleted' });
     });
   });
 };
