@@ -1,6 +1,7 @@
 # A simple, REST API built with NodeJS and ExpressJS
 
-> Tech stack: NodeJS, ExpressJS, MongoDB, GraphQL, graffiti-mongoose
+> Tech stack: NodeJS, ExpressJS, MongoDB, Mongoose
+> Linted with Airbnb's style JavaScript guide
 
 This app creates a simple CRUD REST API, @ "/cats".
 

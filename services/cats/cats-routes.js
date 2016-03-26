@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const Cat = require('./cat.js');
+const Cat = require('./cat-model.js');
 const errorWarning = 'Error occured';
 module.exports = function (app) {
   // Routes for the Cat model

@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/play-by-play');
+
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
@@ -20,8 +23,8 @@ app.use((req, res, next) => {
   next();
 });
 
-const pets = require('./middleware/pets.js')(app); // eslint-disable-line
+const cats = require('./cats-routes.js')(app); // eslint-disable-line
 
-const server = app.listen(3000, () => {
+const server = app.listen(3002, () => {
   console.log(`Server running at ${server.address().port}`);
 });
